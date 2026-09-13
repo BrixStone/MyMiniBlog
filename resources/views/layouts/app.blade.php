@@ -191,7 +191,7 @@
 
             /* Smaller title */
             .t1 {
-                font-size: 20px;
+                font-size: 30px;
             }
 
 
@@ -228,7 +228,8 @@
 
 
             .t1 {
-                font-size: 20px;
+                font-size: 27px;
+                margin-left: 5px;
             }
 
 
