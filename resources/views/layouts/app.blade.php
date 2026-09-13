@@ -13,12 +13,10 @@
             margin: 0;
             padding: 0;
 
-            background: linear-gradient(
-                to right,
-                #0b001a 0%,
-                #281145 40%,
-                #150034 100%
-            );
+            background: linear-gradient(to right,
+                    #0b001a 0%,
+                    #281145 40%,
+                    #150034 100%);
 
             color: white;
             overflow-x: hidden;
@@ -29,7 +27,7 @@
         /* ===== NAVIGATION BAR ===== */
         .b {
             width: 100%;
-            height: 70px;
+            height: 80px;
 
             margin: 0;
             padding: 1rem 5%;
@@ -44,37 +42,6 @@
 
             box-sizing: border-box;
         }
-
-
-        /* ===== MINI BLOG TITLE ===== */
-        .t1 {
-            color: white;
-
-            width: auto;
-            max-width: 300px;
-
-            margin: 0;
-
-            font-size: 40px;
-            font-weight: normal;
-
-            display: flex;
-            align-items: center;
-
-            font-family:
-                system-ui,
-                -apple-system,
-                BlinkMacSystemFont,
-                'Segoe UI',
-                Roboto,
-                Oxygen,
-                Ubuntu,
-                Cantarell,
-                'Open Sans',
-                'Helvetica Neue',
-                sans-serif;
-        }
-
 
         /* ===== NAVIGATION LINKS CONTAINER ===== */
         .nav-links {
@@ -113,13 +80,11 @@
         a::after {
             content: '';
 
-            background: linear-gradient(
-                to right,
-                red,
-                rgb(118, 118, 245),
-                green,
-                yellow
-            );
+            background: repeating-linear-gradient(to right,
+                    #8b5cf6,
+                    #ec4899,
+                    #06b6d4,
+                    #8b5cf6);
 
             border-radius: 100px;
 
@@ -224,6 +189,65 @@
                 height: 32px;
             }
         }
+
+            /* Animated Title Gradient */
+            .t1 {
+                width: auto;
+                max-width: 300px;
+
+                margin: 0;
+
+                font-size: 40px;
+                font-weight: normal;
+
+                display: flex;
+                align-items: center;
+
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    'Segoe UI',
+                    Roboto,
+                    Oxygen,
+                    Ubuntu,
+                    Cantarell,
+                    'Open Sans',
+                    'Helvetica Neue',
+                    sans-serif;
+
+                /* Gradient */
+                background: linear-gradient(90deg,
+                        #8b5cf6,
+                        #ec4899,
+                        #06b6d4,
+                        #8b5cf6);
+
+                /* Makes the gradient move */
+                background-size: 300% 100%;
+
+                /* Shows gradient only inside the text */
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                /* Animation */
+                animation: gradient-flow 4s ease infinite;
+            }
+
+            @keyframes gradient-flow {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                50% {
+                    background-position: 100% 50%;
+                }
+
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
     </style>
 </head>
 
@@ -266,11 +290,7 @@
 
 
         <!-- Menu Icon -->
-        <img
-            class="menu-icon"
-            src="{{ asset('images/Menu.png') }}"
-            alt="Menu"
-        >
+        <img class="menu-icon" src="{{ asset('images/Menu.png') }}" alt="Menu">
 
     </div>
 

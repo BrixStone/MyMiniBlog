@@ -19,8 +19,7 @@
         <h1>About</h1>
         <p>This website is a simple blogging platform where users can create and share their thoughts with the world.</p>
         <p>It is built using Laravel, a popular PHP framework, and utilizes Blade templating for the front-end.</p>
-        <p>Feel free to explore the website, create posts, and engage with the content
-!</p>
+        <p>Feel free to explore the website, create posts, and engage with the content!</p>
     </div>
 </body>
 </html>

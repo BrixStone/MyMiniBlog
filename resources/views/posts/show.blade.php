@@ -13,7 +13,16 @@
     }
 
     h2 {
-        color: yellow;
+        background: repeating-linear-gradient(
+               to right,
+               #8b5cf6 0%,
+               #ec4899 2%,
+               #06b6d4 5%,
+               #8b5cf6 7%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
     }
 
     .box {
@@ -83,7 +92,16 @@
     }
 
     h1 {
-        color: yellow
+        background: repeating-linear-gradient(
+               to right,
+               #8b5cf6 0%,
+               #ec4899 2%,
+               #06b6d4 5%,
+               #8b5cf6 7%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
     }
 
 </style>
@@ -95,6 +113,10 @@
         <div class="box3">
         <a href="{{ route('posts.edit', $post['id']) }}" class="edit-btn">
             <button type="button">Edit</button>
+        </a>
+        
+        <a href="{{ route('posts.index') }}" class="edit-btn">
+            <button type="button">Return</button>
         </a>
 
         <form action="{{ route('posts.destroy', $post['id']) }}" method="POST" style="display:inline">

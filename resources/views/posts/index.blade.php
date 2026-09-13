@@ -14,7 +14,17 @@
     }
 
     h2 {
-        color: yellow;
+        background: repeating-linear-gradient(
+               to right,
+               #8b5cf6 0%,
+               #ec4899 2%,
+               #06b6d4 5%,
+               #8b5cf6 7%
+            );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
     }
 
     .box {
@@ -62,6 +72,19 @@
     button:hover {
         background-color: #c600a8;
         transition: ease 0.3s;
+    }
+
+    .errorbox1 {
+        background: rgba(255, 255, 255, 0.10);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        padding: 20px;
+        margin: 20px;
+        border-radius: 15px;
+
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
 </style>
 
@@ -112,8 +135,9 @@
     </article>
 
 @empty
-
-    <p>No posts found.</p>
+<div class="errorbox1">
+    <p class="error">No posts found.</p>
+</div>
 
 @endforelse
 
