@@ -118,7 +118,7 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $validated = $request->validate([
+        $request->validate([
             'title' => 'required|string|max:255',
             'body' => 'required|string',
         ]);
@@ -131,8 +131,8 @@ class PostController extends Controller
             abort(404);
         }
 
-        $posts[$id]['title'] = $validated['title'];
-        $posts[$id]['body'] = $validated['body'];
+        $posts[$id]['title'] = $request->title;
+        $posts[$id]['body'] = $request->body;
 
         Session::put('posts', $posts);
 
