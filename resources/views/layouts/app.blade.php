@@ -23,6 +23,65 @@
             min-height: 100vh;
         }
 
+        /* Animated Title Gradient */
+            .t1 {
+                width: auto;
+                max-width: 300px;
+
+                margin: 0;
+
+                font-size: 40px;
+                font-weight: normal;
+
+                display: flex;
+                align-items: center;
+
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    'Segoe UI',
+                    Roboto,
+                    Oxygen,
+                    Ubuntu,
+                    Cantarell,
+                    'Open Sans',
+                    'Helvetica Neue',
+                    sans-serif;
+
+                /* Gradient */
+                background: linear-gradient(90deg,
+                        #8b5cf6,
+                        #ec4899,
+                        #06b6d4,
+                        #8b5cf6);
+
+                /* Makes the gradient move */
+                background-size: 300% 100%;
+
+                /* Shows gradient only inside the text */
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                /* Animation */
+                animation: gradient-flow 4s ease infinite;
+            }
+
+            @keyframes gradient-flow {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                50% {
+                    background-position: 100% 50%;
+                }
+
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+
 
         /* ===== NAVIGATION BAR ===== */
         .b {
@@ -121,7 +180,7 @@
            MOBILE
            ================================================== */
 
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
 
             .b {
                 height: 65px;
@@ -132,7 +191,7 @@
 
             /* Smaller title */
             .t1 {
-                font-size: 30px;
+                font-size: 20px;
             }
 
 
@@ -161,7 +220,7 @@
            SMALL PHONES
            ================================================== */
 
-        @media (max-width: 600px) {
+        @media (max-width: 500px) {
 
             .b {
                 padding: 1rem 2%;
@@ -169,7 +228,7 @@
 
 
             .t1 {
-                font-size: 24px;
+                font-size: 20px;
             }
 
 
@@ -190,64 +249,7 @@
             }
         }
 
-            /* Animated Title Gradient */
-            .t1 {
-                width: auto;
-                max-width: 300px;
-
-                margin: 0;
-
-                font-size: 40px;
-                font-weight: normal;
-
-                display: flex;
-                align-items: center;
-
-                font-family:
-                    system-ui,
-                    -apple-system,
-                    BlinkMacSystemFont,
-                    'Segoe UI',
-                    Roboto,
-                    Oxygen,
-                    Ubuntu,
-                    Cantarell,
-                    'Open Sans',
-                    'Helvetica Neue',
-                    sans-serif;
-
-                /* Gradient */
-                background: linear-gradient(90deg,
-                        #8b5cf6,
-                        #ec4899,
-                        #06b6d4,
-                        #8b5cf6);
-
-                /* Makes the gradient move */
-                background-size: 300% 100%;
-
-                /* Shows gradient only inside the text */
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-
-                /* Animation */
-                animation: gradient-flow 4s ease infinite;
-            }
-
-            @keyframes gradient-flow {
-                0% {
-                    background-position: 0% 50%;
-                }
-
-                50% {
-                    background-position: 100% 50%;
-                }
-
-                100% {
-                    background-position: 0% 50%;
-                }
-            }
+            
     </style>
 </head>
 
