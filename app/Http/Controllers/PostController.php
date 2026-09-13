@@ -16,8 +16,8 @@ class PostController extends Controller
             Session::put('posts', [
                 1 => [
                     'id' => 1,
-                    'title' => 'BSCS Student Blog',
-                    'body' => 'Welcome! This is my first Laravel website. I had fun creating this, so please enjoy my website.',
+                    'title' => 'My Little Mini BLog!',
+                    'body' => 'Welcome!? This is my first time doing something like this but welocome to my first ever website!',
                 ],
             ]);
         }

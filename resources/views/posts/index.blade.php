@@ -53,10 +53,6 @@
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
 
-    a {
-        margin: 0;
-        color: white;
-    }
 
     button {
         background-color: #555;
